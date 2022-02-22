@@ -1,0 +1,37 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+
+    &__item {
+        margin: 0 .5rem;
+    }
+
+    &__link {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        background-color: #0D0D0D;
+        border-radius: 3px;
+        font-size: 1.4rem;
+        line-height: 4rem;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+        box-shadow: 0 0 10px rgba($black, 0.15);
+        transition: background-color .2s linear;
+
+        &:hover {
+            background-color: lighten(#000000, 2%);
+        }
+
+        &.active {
+            background-color: $blue;
+            box-shadow: 0 0 10px rgba($blue, 0.15);
+        }
+    }
+
+    @include breakpoint($tablet-bp) {
+        margin-top: 5rem;;
+    }
+}

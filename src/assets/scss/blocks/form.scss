@@ -1,0 +1,78 @@
+.form {
+
+
+
+    &--auth {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    &__group {
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        &--mb {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__control {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #3F3F3F;
+        border-radius: 0;
+        box-shadow: none;
+        font-family: inherit;
+        font-size: 1.4rem;
+        color: $white;
+
+        @include breakpoint($mobile-bp) {
+            width: 90%;
+        }
+        &::placeholder {
+            color: rgba($white, .2)
+        }
+
+        &:focus + .form__line {
+            width: 100%;
+
+            @include breakpoint($mobile-bp) {
+                width: 90%;
+            }
+        }
+
+        &--textarea {
+            height: 40px;
+            resize: none;
+            overflow: hidden;
+        }
+    }
+    &__line {
+        width: 0;
+        height: 1px;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        transition: width .4s ease-in-out;
+    }
+
+    &__footer {
+
+        &--center {
+            text-align: center;
+        }
+        
+        &-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            li {
+                margin: 0 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.related {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #1C1C1C;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include breakpoint($tablet-bp) {
+            flex-direction: column;
+        }
+
+        &-item {
+            margin-bottom: 2.5rem;
+            width: 50%;
+
+            @include breakpoint($tablet-bp) {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            font-size: 1.4rem;
+            color: #F3EBA2;
+            font-weight: 500;
+            margin-bottom: .5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 244px;
+        }
+
+        &-date {
+            color: #828282;
+            font-size: 1.2rem;
+        }
+    }
+
+
+}
+

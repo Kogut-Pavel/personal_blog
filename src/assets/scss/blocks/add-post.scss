@@ -1,0 +1,96 @@
+.add-post {
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+
+    background-color: $secondary;
+    box-shadow: 0 15px 25px rgba($color: $black, $alpha: .45);
+    border-radius: 5px;
+
+    &__form {
+        display: flex;
+        align-items: center;
+        &-actions {
+            display: flex;
+            justify-content: flex-end;
+            width: 120px;
+            flex-shrink: 0;
+            align-self: flex-end;
+
+            @include breakpoint($mobile-bp) {
+                width: 9rem;
+            }
+        }
+    }
+
+    &__textarea {
+        display: block;
+        flex-grow: 1;
+        height: 26px;
+
+        border: none;
+        background: transparent;
+        resize: none;
+    
+        font-size: 1.5rem;
+        color: $white;
+        font-family: inherit;
+        overflow: hidden;
+        
+        &::placeholder {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            color: #D2D2D2;
+        }
+    }
+
+    &__file,
+    &__send {
+        display: block;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.2s linear;
+
+        @include breakpoint($mobile-bp) {
+            width: 3.4rem;
+            height: 3.4rem;
+        }
+    }
+    &__file {
+        background: #EBEBEB url("../images/add-photo.svg") center no-repeat;
+        input {
+            display: none;
+        }
+
+        &:hover {
+            background-color: darken(#EBEBEB, 10%)
+        }
+
+        @include breakpoint($mobile-bp) {
+            background-size: 1.8rem;
+        }
+    }
+
+    &__send {
+        margin-left: 1.5rem;
+        font-size: 0;
+        color: transparent;
+        background: $blue url("../images/send.svg") center no-repeat;
+        &:hover {
+            background-color: darken($blue, 10%)
+        }
+
+        @include breakpoint($mobile-bp) {
+            background-size: 1.5rem;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 1.5rem;
+    }
+}
+
+
+

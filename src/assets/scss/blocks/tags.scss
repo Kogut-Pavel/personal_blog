@@ -1,0 +1,20 @@
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    
+    &__item {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        margin-right: 10px;
+        padding: .4rem .9rem;
+        background-color: #EA8C1E;
+        border-radius: 3px;
+        margin-bottom: 1rem;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 3rem;
+    }
+}
