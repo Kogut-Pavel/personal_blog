@@ -513,6 +513,10 @@ a:hover {
     .nav__item:hover .nav__link {
         background: none;
     }
+
+    .nav__item:hover > .subnav {
+        display: none;
+    }
 }
 
 .nav__link {
@@ -711,6 +715,7 @@ a:hover {
 
 .sidebar__content {
     padding: 0 2rem;
+    margin-top: -5rem;
 }
 
 @media (max-width: 991px) {
@@ -718,11 +723,6 @@ a:hover {
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-}
-
-.sidebar__content {
-    padding: 0 2rem;
-    margin-top: -5rem;
 }
 
 .sidebar__footer {
