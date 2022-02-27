@@ -11,12 +11,16 @@
     top: 100%;
     left: 0;
 
+
     @include breakpoint($tablet-bp) {
         position: static;
         width: 100%;
         padding-left: 1rem;
         background-color: transparent;
         box-shadow: none;
+        &.active {
+            display: block;
+        }
     }
 
     &__link {
@@ -41,4 +45,5 @@
             }
         }
     }
+
 }

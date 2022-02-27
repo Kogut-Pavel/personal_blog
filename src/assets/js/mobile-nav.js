@@ -27,6 +27,17 @@ burger.addEventListener('click', event => {
 });
 
 
+const hasSubnav = document.querySelectorAll('.nav--mobile .has-subnav');
+const subnav = document.querySelector('.nav--mobile .subnav');
+
+
+hasSubnav.forEach(item => {
+    item.addEventListener('click', () => {  
+        subnav.classList.toggle('active');
+    });
+});
+
+
 
 
 

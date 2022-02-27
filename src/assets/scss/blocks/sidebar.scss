@@ -44,15 +44,11 @@
 
     &__content {
         padding: 0 2rem;
+        margin-top: -5rem;
 
         @include breakpoint($tablet-bp) {
             flex-grow: 1;
         }
-    }
-
-    &__content {
-        padding: 0 2rem;
-        margin-top: -5rem;
     }
 
     &__footer {
